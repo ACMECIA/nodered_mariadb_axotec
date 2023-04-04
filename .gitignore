@@ -1,0 +1,3 @@
+mariadb-data/*
+nodered-data/*
+!nodered-data/node_modules

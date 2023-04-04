@@ -1,0 +1,54 @@
+version: '3.7'
+services:
+    nodered:
+        container_name: nodered
+        image: nodered/node-red:2.2.3-12
+        ports:
+            - "1880:1880"
+
+        environment:
+            TZ: America/Lima
+        volumes:
+            - "./nodered-data:/data"
+        privileged: true
+        restart: "always"
+
+        network_mode: "host"
+            
+
+        # networks:
+        #     - connect_network
+
+    db:
+        image: lscr.io/linuxserver/mariadb
+        container_name: mariadb
+        volumes:
+        - ./mariadb-data:/config
+        privileged: true
+        restart: always
+        ports:
+        - 3306:3306
+        environment:
+            PUID: 1000
+            PGID: 1000
+            MYSQL_DATABASE: db_mysql
+            TZ: America/Lima
+            # MYSQL_USER: combustible_user
+            # MYSQL_PASSWORD: /run/secrets/db_password
+            # MYSQL_ROOT_PASSWORD: /run/secrets/db_root_password
+            # FILE__PASSWORD: /run/secrets/db_password
+    
+        secrets:
+            - db_password
+            - db_root_password
+        # networks:
+        #     - connect_network    
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt
+  db_root_password:
+    file: ./secrets/db_root_password.txt
+
+# networks:
+#   connect_network:
