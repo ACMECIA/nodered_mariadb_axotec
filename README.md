@@ -20,3 +20,18 @@ luego, ejecutar levantar los servicios
 ```
 docker compose up
 ```
+
+
+Modulos instalados:
+
+- red-contrib-socketcan
+- node-red-dashboard
+- node-red-contrib-web-worldmap
+- node-red-contrib-moment
+- node-red-contrib-ui-digital-display
+- node-red-contrib-ui-led
+- node-red-node-mysql
+- node-red-contrib-ui-svg
+- node-red-node-base64
+- @mschaeffler/node-red-hourmeter
+
