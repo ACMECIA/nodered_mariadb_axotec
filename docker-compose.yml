@@ -31,12 +31,12 @@ services:
         environment:
             PUID: 1000
             PGID: 1000
+            MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: db_mysql
             TZ: America/Lima
-            # MYSQL_USER: combustible_user
-            # MYSQL_PASSWORD: /run/secrets/db_password
-            # MYSQL_ROOT_PASSWORD: /run/secrets/db_root_password
-            # FILE__PASSWORD: /run/secrets/db_password
+         
+            
+            
     
         secrets:
             - db_password
