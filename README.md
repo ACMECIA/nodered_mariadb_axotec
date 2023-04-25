@@ -34,4 +34,5 @@ Modulos instalados:
 - node-red-contrib-ui-svg
 - node-red-node-base64
 - @mschaeffler/node-red-hourmeter
+- node-red-node-serialport
 
