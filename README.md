@@ -36,5 +36,6 @@ Modulos instalados:
 - node-red-node-serialport
 - node-red-contrib-nmea
 - @mschaeffler/node-red-hourmeter
+- node-red-contrib-aedes
 
 
